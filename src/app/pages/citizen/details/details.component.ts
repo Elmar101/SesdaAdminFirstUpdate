@@ -29,7 +29,7 @@ export class DetailsComponent implements OnInit {
     return this.items["fatherName"] ? this.items["fatherName"] : null;
   }
   get gender(){
-    if(this.items["gender"]==0 ) return "kişi" ;
+    if(this.items["gender"]==1 ) return "kişi" ;
     else return "Qadin";
   }
  get  birthDay(){

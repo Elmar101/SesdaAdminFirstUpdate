@@ -103,12 +103,12 @@
 
             <ng-container matColumnDef="birthDate" class="w15">
               <mat-header-cell *matHeaderCellDef mat-sort-header>Doğum tarixi</mat-header-cell>
-              <mat-cell *matCellDef="let row">{{row.birthDate}}</mat-cell>
+              <mat-cell *matCellDef="let row">{{row.birthDate | date: 'dd.MM.yyyy'}}</mat-cell>
             </ng-container>
 
             <ng-container matColumnDef="gender">
               <mat-header-cell *matHeaderCellDef mat-sort-header>Cinsi</mat-header-cell>
-              <mat-cell *matCellDef="let row">{{row.gender}}</mat-cell>
+              <mat-cell *matCellDef="let row" >{{ row.gender==0 ? 'Qadin': 'Kişi' }}</mat-cell>
             </ng-container>
             <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
             <mat-row *matRowDef="let row; columns: displayedColumns;"
